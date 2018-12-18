@@ -1,0 +1,32 @@
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.demo.pojo
+#数据库连接池
+spring:
+  mvc:
+    static-path-pattern: /static/**
+#    view:
+#      prefix: /static
+#      suffix: .html
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+      enabled: true
+  datasource:
+    username: root
+    password: sasa
+    url: jdbc:mysql://localhost:3306/ssm
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
+
+server:
+  port: 9900
+  tomcat:
+    uri-encoding: UTF-8
+  #  servlet:
+  #    context-path: /api/test
+
+

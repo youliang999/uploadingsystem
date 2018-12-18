@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>upload file</title>
+    <script type="application/javascript">
+        function uploadContent() {
+            alert(111);
+        }
+    </script>
+</head>
+<body>
+
+<div style="      font: normal 20px/36px 'Arial Normal', 'Arial';
+    text-indent: 20px;          border-bottom: 1px solid black;">
+    <h3 th:inlines="text">文件上传</h3>
+</div>
+<div style="margin: 30px 100px;">
+    <form action="/upload/multifile" method="post" enctype="multipart/form-data" >
+        <p>选择文件1: <input type="file" name="fileName"/></p>
+        <p>选择文件2: <input type="file" name="fileName"/></p>
+        <p>选择文件3: <input type="file" name="fileName"/></p>
+        <p><input type="submit" value="提交"/></p>
+    </form>
+
+</div>
+
+
+<div style=" font: normal 20px/36px 'Arial Normal', 'Arial';  border-top: 1px solid black;"/>
+<div style="      font: normal 20px/36px 'Arial Normal', 'Arial';
+    text-indent: 20px;          border-bottom: 1px solid black;">
+    <h3 th:inlines="text">文本上传</h3>
+</div>
+
+<div style="margin: 30px 100px;">
+    <form action="/upload/uploadStr" method="post" enctype="multipart/form-data" >
+        <textarea style="width: 400px; height: 100px;" id="content" name="content" value="" placeholder="请输入需要上传的内容"></textarea>
+        <button id="uploadContent" type="submit" value="上传">上传</button>
+    </form>
+</div>
+<div style=" font: normal 20px/36px 'Arial Normal', 'Arial';  border-bottom: 1px solid black;"/>
+</body>
+</html>
